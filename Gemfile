@@ -37,6 +37,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Para la autenticación de usuarios
 gem 'devise', '~> 4.7', '>= 4.7.1'
+# Para  que se vea visualmente agradable
+
+gem 'jquery-rails'
+
+gem 'bootstrap', '~> 4.3.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

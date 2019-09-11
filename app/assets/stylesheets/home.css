@@ -1,15 +1,18 @@
+
     * {
     	box-sizing: border-box;
     }
-    html {
+    /* html {
       font-size: -moz-calc(4px + 0.45vw);
       font-size: -webkit-calc(4px + 0.45vw);
     	font-size: calc(4px + 0.45vw);
-    }
+    } */
     body {
     	font-family: 'Montserrat', sans-serif;
     	color: #000;
+      margin: 0px 20px;
     }
+
     a {
     	text-decoration: none;
     	color: #000;
@@ -19,15 +22,20 @@
     }
     /* Primary Style
     --------------------------------*/
-    .main {
+    /* .main {
     	max-width: 110rem;
     	margin: 0 auto;
     	padding: 0 2rem;
-    }
+    } */
     header {
-    	line-height: 12rem;
-    	height: 12rem;
+    	/* line-height: 12rem; */
+    	/* height: 12rem; */
+      margin: 0px 0px 20px;
+      padding: 20px 0px;
+      /* margin-bottom: 10px; */
     }
+
+    /*
     header h1 {
     	font-size: 2.5rem;
     	font-family: 'Oswald', sans-serif;
@@ -50,9 +58,9 @@
     	font-weight: 900;
     	font-size: 1.2rem;
     	letter-spacing: 2px;
-    }
+    } */
     .text {
-    	font-size: 2rem;
+    	/* font-size: 2rem; */
     	padding: 2rem 0;
     	-moz-columns: 3;
     	-webkit-columns: 3;
@@ -61,14 +69,14 @@
     .text p {
     	margin-bottom: 2rem;
     }
-    @media screen and (max-width: 800px) {
+    /* @media screen and (max-width: 800px) {
     	header ul li:not(:nth-child(4)) {
     		display: none;
     	}
     	header ul li:nth-child(4) {
     		width: 100%;
     	}
-    }
+    } */
     /* Slider Style
     --------------------------------------*/
     .cd-slider {
@@ -112,7 +120,7 @@
     }
     .content h2 {
       font-weight: bold;
-      font-size: 9rem;
+      font-size: 5rem;
     	text-overflow: ellipsis;
     	overflow: hidden;
     	transform: translateY(-30%);
@@ -158,7 +166,6 @@
     	position: absolute;
     	bottom: 0;
     	right: 0;
-    	background: #fff;
     	z-index: 2;
     }
     .prev, .next, .counter {

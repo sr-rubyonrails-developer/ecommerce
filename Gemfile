@@ -44,6 +44,8 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.3.1'
 
 gem "font-awesome-rails"
+# Para  cargar archivos
+gem 'carrierwave', '~> 2.0', '>= 2.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

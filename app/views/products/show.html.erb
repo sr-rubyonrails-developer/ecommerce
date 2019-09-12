@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag(@product.foto_url, :width => "100%") if @product.foto.present? %>
+</p>
+
+<p>
   <strong>Nombre:</strong>
   <%= @product.nombre %>
 </p>

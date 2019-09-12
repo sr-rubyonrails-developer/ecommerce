@@ -11,42 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :nombre %>
-    <%= form.text_field :nombre %>
+    <%= form.text_field :nombre, {class: "form-control form-control-lg"}%>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :clave %>
-    <%= form.text_field :clave %>
+    <%= form.text_field :clave, {class: "form-control form-control-lg"} %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :precio_de_venta %>
-    <%= form.text_field :precio_de_venta %>
+    <%= form.number_field :precio_de_venta, {class: "form-control form-control-lg"}%>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :stock %>
-    <%= form.number_field :stock %>
+    <%= form.number_field :stock, {class: "form-control form-control-lg"}%>
   </div>
 
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_area :descripcion %>
+  <div class="field form-group">
+    <%= form.label "Descripción"%>
+    <%= form.text_area :descripcion, {class: "form-control form-control-lg"} %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :color %>
-    <%= form.text_field :color %>
+    <%= form.text_field :color, {class: "form-control form-control-lg"}%>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :talla %>
-    <%= form.text_field :talla %>
+    <%= form.text_field :talla, {class: "form-control form-control-lg"}%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Crear", class: "btn btn-outline-success btn-lg" %>
   </div>
 <% end %>

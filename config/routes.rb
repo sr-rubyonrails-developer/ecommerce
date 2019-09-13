@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :brands
+  resources :categories
   get 'home/index'
   root to: "home#index"
 

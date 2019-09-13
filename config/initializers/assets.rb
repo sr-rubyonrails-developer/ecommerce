@@ -14,5 +14,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # javascripts
 Rails.application.config.assets.precompile += %w( home.js )
+Rails.application.config.assets.precompile += %w( products.js )
+
 # stylesheets
 Rails.application.config.assets.precompile += %w( home.css )
+Rails.application.config.assets.precompile += %w( products.css )

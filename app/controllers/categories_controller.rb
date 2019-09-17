@@ -28,8 +28,8 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to @category, notice: "La categoría '#{@category.nombre}' se creó con exito." }
-        format.json { render :show, status: :created, location: @category }
+        format.html { redirect_to categories_url, notice: "La categoría '#{@category.nombre}' se creó con exito." }
+        format.json { head :no_content }
       else
         format.html { render :new }
         format.json { render json: @category.errors, status: :unprocessable_entity }
@@ -42,12 +42,19 @@ class CategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to @category, notice: "La categoría '#{@category.nombre}' se actualizó correctamente." }
-        format.json { render :show, status: :ok, location: @category }
+        format.html { redirect_to categories_url, notice: "La categoría '#{@category.nombre}' se actualizó correctamente." }
+        format.json { head :no_content }
       else
-        format.html { render :edit }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
+        format.html { redirect_to categories_url, notice: "No fue posible actualizar la categoría '#{@category.nombre}', intentalo una vez más.." }
+        format.json { head :no_content }
       end
+      # if @category.update(category_params)
+      #   format.html { redirect_to @category, notice: "La categoría '#{@category.nombre}' se actualizó correctamente." }
+      #   format.json { render :show, status: :ok, location: @category }
+      # else
+      #   format.html { render :edit }
+      #   format.json { render json: @category.errors, status: :unprocessable_entity }
+      # end
     end
   end
 

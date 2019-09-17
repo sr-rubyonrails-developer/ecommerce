@@ -27,13 +27,20 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brand_params)
 
     respond_to do |format|
-      if @brand.save
-        format.html { redirect_to @brand, notice: "La marca '#{@brand.nombre}' se creó con exito." }
-        format.json { render :show, status: :created, location: @brand }
+      if @brand.update(brand_params)
+        format.html { redirect_to brands_url, notice: "La marca '#{@brand.nombre}' se creó con exito." }
+        format.json { head :no_content }
       else
-        format.html { render :new }
-        format.json { render json: @brand.errors, status: :unprocessable_entity }
+        format.html { redirect_to brands_url, notice: "No fue posible actualizar la marca '#{@brand.nombre}', intentalo una vez más." }
+        format.json { head :no_content }
       end
+      # if @brand.save
+      #   format.html { redirect_to @brand, notice: "La marca '#{@brand.nombre}' se creó con exito." }
+      #   format.json { render :show, status: :created, location: @brand }
+      # else
+      #   format.html { render :new }
+      #   format.json { render json: @brand.errors, status: :unprocessable_entity }
+      # end
     end
   end
 
@@ -42,13 +49,22 @@ class BrandsController < ApplicationController
   def update
     respond_to do |format|
       if @brand.update(brand_params)
-        format.html { redirect_to @brand, notice: "La marca '#{@brand.nombre}' se actualizó correctamente."}
-        format.json { render :show, status: :ok, location: @brand }
+        format.html { redirect_to brands_url, notice: "La marca '#{@brand.nombre}' se actualizó correctamente." }
+        format.json { head :no_content }
       else
-        format.html { render :edit }
-        format.json { render json: @brand.errors, status: :unprocessable_entity }
+        format.html { redirect_to brands_url, notice: "No fue posible actualizar la marca '#{@brand.nombre}', intentalo una vez más." }
+        format.json { head :no_content }
       end
     end
+    # respond_to do |format|
+      # if @brand.update(brand_params)
+      #   format.html { redirect_to @brand, notice: "La marca '#{@brand.nombre}' se actualizó correctamente."}
+      #   format.json { render :show, status: :ok, location: @brand }
+      # else
+      #   format.html { render :edit }
+      #   format.json { render json: @brand.errors, status: :unprocessable_entity }
+      # end
+    # end
   end
 
   # DELETE /brands/1

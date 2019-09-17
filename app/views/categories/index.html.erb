@@ -20,12 +20,12 @@
       <tr>
         <td><%= category.nombre %></td>
         <td>
-          <%=link_to(edit_category_path(category), remote: true) do %>
+          <%=link_to(edit_category_path(category), remote: true, class: "text-warning") do %>
             <i class="fa fa-edit fa-lg"></i> Editar
           <%end%>
         </td>
         <td>
-          <%=link_to category, method: :delete, data: { confirm: "¿Realmente quieres eliminar la categoría '#{category.nombre}'?" }  do %>
+          <%=link_to category, method: :delete, data: { confirm: "¿Realmente quieres eliminar la categoría '#{category.nombre}'?" },class: "text-danger" do %>
             <i class="fa fa-trash fa-lg"></i> Eliminar
           <%end%>
         </td>

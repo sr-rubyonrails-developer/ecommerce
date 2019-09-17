@@ -13,4 +13,13 @@
  *= require font-awesome
  */
 
- @import "bootstrap";
+@import "bootstrap";
+
+$darkGrey: #4f585e;
+
+body {
+   // background: $lightBG;
+   color: $darkGrey;
+   font-family: 'Source Sans Pro', sans-serif;
+   text-rendering: optimizeLegibility;
+ }

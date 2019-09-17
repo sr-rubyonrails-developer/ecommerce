@@ -1,11 +1,35 @@
+
 <div class="cards">
   <% @products.each do |product| %>
-    <%= render @products%>
+    <div id="product_<%= product.id %>" class="card">
+      <div>
+        <%= image_tag(product.foto_url) if product.foto.present? %>
+      </div>
+      <!-- <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" /> -->
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+            <%= product.nombre %>
+             <!-- <small><b>Marca: </b>< product. ></small>  -->
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+          <div class="card-description">
+            <%= product.descripcion %>
+          </div>
+          <div class="card-actions">
+
+          </div>
+      </div>
+    </div>
+    <%= link_to 'Ver producto', product, {class: "btn"}%>
   <%end%>
 </div>
 
 <%= javascript_include_tag "products" %>
-
 
 <script type="text/javascript">
 

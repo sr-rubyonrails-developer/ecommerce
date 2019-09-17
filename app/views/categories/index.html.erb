@@ -25,7 +25,7 @@
           <%end%>
         </td>
         <td>
-          <%=link_to category, method: :delete, data: { confirm: 'Are you sure?' }  do %>
+          <%=link_to category, method: :delete, data: { confirm: "¿Realmente quieres eliminar la categoría '#{category.nombre}'?" }  do %>
             <i class="fa fa-trash fa-lg"></i> Eliminar
           <%end%>
         </td>

@@ -20,14 +20,14 @@
       <tr>
         <td><%= brand.nombre %></td>
         <td>
-          <!-- <link_to(edit_brand_path(nombre), remote: true) do > -->
+          <%=link_to(edit_brand_path(brand), remote: true) do %>
             <i class="fa fa-edit fa-lg"></i> Editar
-          <!-- <end> -->
+          <%end%>
         </td>
         <td>
-          <!-- <link_to brand, method: :delete, data: { confirm: 'Are you sure?' }  do > -->
+          <%=link_to brand, method: :delete, data: { confirm: "¿Realmente quieres eliminar la marca '#{ brand.nombre }'?" }  do %>
             <i class="fa fa-trash fa-lg"></i> Eliminar
-          <!-- <end> -->
+          <%end%>
         </td>
       </tr>
     <% end %>

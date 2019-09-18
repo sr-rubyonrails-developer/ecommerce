@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.order(:nombre)
   end
 
   # GET /categories/1
@@ -42,7 +42,7 @@ class CategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to categories_url, notice: "La categoría '#{@category.nombre}' se actualizó correctamente." }
+        format.html { redirect_to categories_url, notice: "La categoría '#{@category.nombre}'." }
         format.json { head :no_content }
       else
         format.html { redirect_to categories_url, notice: "No fue posible actualizar la categoría '#{@category.nombre}', intentalo una vez más.." }

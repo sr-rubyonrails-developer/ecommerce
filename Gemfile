@@ -45,7 +45,7 @@ gem 'bootstrap', '~> 4.3.1'
 
 gem "font-awesome-rails"
 # Para  cargar archivos
-gem 'carrierwave', '~> 2.0', '>= 2.0.1'
+gem 'carrierwave', '~> 2.1'
 gem 'materialize-sass', '~> 1.0.0'
 
 group :development, :test do
